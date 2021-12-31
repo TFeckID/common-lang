@@ -1,6 +1,5 @@
 package info.fangou.util;
 
-import java.sql.SQLOutput;
 import java.util.Collection;
 import java.util.Map;
 
