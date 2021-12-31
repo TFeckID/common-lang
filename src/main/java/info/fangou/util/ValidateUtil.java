@@ -35,6 +35,28 @@ public class ValidateUtil {
         }
     }
 
+    /**
+     * Description : 判断对象是否为空，可支持字符串及集合类，数组。不能判断字符串全为空格的情况  <br/>
+     * ChangeLog : 1. 创建 (2021/12/31 22:51 [try]);
+     * @param source
+     * @return boolean
+     */
+    public static boolean isEmpty(Object source){
+        if (source == null){
+            return true;
+        }else if (source instanceof CharSequence){
+            return ((CharSequence)source).isEmpty();
+        }else if (source instanceof Object[]){
+            return ((Object[])source).length == 0;
+        }else if (source instanceof Collection){
+            return ((Collection)source).isEmpty();
+        }else if (source instanceof Map){
+            return ((Map)source).isEmpty();
+        }else {
+            return false;
+        }
+    }
+
 
 
 }
